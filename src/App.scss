@@ -1,0 +1,151 @@
+@use './scss/' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 1.5;
+
+    background-color: $white;
+    color: $txt-color;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+button,
+input {
+    outline: 0;
+    padding: 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe{
+    border: 0;
+}
+
+.container{
+    max-width: 1660px;
+    margin: auto;
+}
+
+//===============NAV===============\\
+
+.navbar{
+    @include flex (center, space-between, row);
+    background-color: $white;
+    box-shadow: $box-shadow;
+    padding: $basic;
+    position: fixed;
+    width: 100%;
+
+    &__logo{
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
+
+    &__button{
+        @include flex (center, center, row);
+
+    &-img{ 
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }    
+    }
+}
+
+.navmenu{
+    @include flex (center, left, column);
+    background-color: $grey1;
+    padding: $basic;
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+
+    &__search{
+        @include flex (center, center, row);
+        position: relative;
+
+        &-img{
+            position: absolute;
+            right: 0;
+            margin-right: 8px;
+            height: 35px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                transform: scale(1.1)
+            }
+        }
+
+        &-input{
+            border: 1px solid $grey2;
+            width: 350px;
+            height: 56px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: $purple;
+    
+            &::placeholder{
+                color: $grey3;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__container{
+        @include flex (left, center, column);
+        width: 100%;
+
+        &-title{
+            color: $purple;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: $basic;
+            border-bottom: 1px solid $grey2;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                transform: scale(1.01)
+            }
+        }
+
+        &-a{
+            @include flex (center, space-between, row);
+            color: $grey8;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: $basic;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                color: $indigo;
+                transform: scale(1.01);
+            }
+        }
+    }    
+}
