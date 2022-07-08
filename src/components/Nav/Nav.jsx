@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 //components
 import Links from './Links';
 
+//Unicons
+import * as Unicons from '@iconscout/react-unicons';
 
 //Icons and Images
 import logoMenu from '../../assets/logoMenu.svg';
@@ -27,10 +29,10 @@ const handleClick = () => setNav(!nav);
                   </a>
              </div>
             <img className='navbar__logo' src={logoMenu} alt="Logo Menu" />
-            <img src={searchIcon} alt="Logo Menu" />
+            <img className='navbar__button-search' src={searchIcon} alt="Logo Menu" />
       </div>
       
-      <div className='navmenu'>
+      <div className={!nav ? 'navmenu navmenu--visible' : 'navmenu navmenu--hidden' } >
             <div className='navmenu__search'>
                   <input className='navmenu__search-input' autoFocus placeholder='Buscar' type="text" />
                   <img className='navmenu__search-img' src={searchIcon2} alt="" />
@@ -58,6 +60,12 @@ const handleClick = () => setNav(!nav);
                   <Links link="#" text="Quiero ser mamá"/>
                   <Links link="#" text="Voy a ser mamá"/>
                   <Links link="#" text="Parto"/>
+            </div>
+
+            <div className='navmenu__social'>
+                  <a className='navmenu__social-icon' href="#"><Unicons.UilLinkedin /></a>
+                  <a className='navmenu__social-icon' href="#"><Unicons.UilFacebook /></a>
+                  <a className='navmenu__social-icon' href="#"><Unicons.UilInstagramAlt /></a>
             </div>
       </div>
     </nav>
