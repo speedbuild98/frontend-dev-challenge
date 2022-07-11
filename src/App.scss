@@ -52,7 +52,6 @@ iframe{
 .navbar{
     @include flex (center, space-between, row);
     background-color: $white;
-    box-shadow: $box-shadow;
     padding: $basic;
     position: fixed;
     width: 100%;
@@ -96,28 +95,30 @@ iframe{
     @include flex (center, left, column);
     background-color: $grey1;
     padding: $basic;
-    width: 100%;
-    height: 100vh;  
-    padding-top: 80px;
+    height: 100%;
     z-index: 10;
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    width: 0;
+    padding-top: 80px;
 
     &--visible{
-        transform: translate(-100vh);
+        width: 100vw;
     }
 
     &--hidden{
-        transform: translate(0vh);
+        width: 0%;
+        padding: 0;
     }
 
     &__search{
-        @include flex (center, center, row);
+        @include flex (center, flex-start, row);
         position: relative;
 
         &-img{
             position: absolute;
             right: 0;
-            margin-right: 8px;
+            margin-right: $basic;
             height: 35px;
             cursor: pointer;
             transition: all .3s ease-in-out;
@@ -131,7 +132,7 @@ iframe{
             border: 1px solid $grey2;
             width: 350px;
             height: 56px;
-            border-radius: 8px;
+            border-radius: $basic;
             font-weight: 700;
             color: $purple;
     
@@ -195,3 +196,16 @@ iframe{
         }
     }
 }
+
+.visible{
+    transition: all 1s ease-in-out;
+    display: flex;
+    opacity: 100%;
+}
+
+.hidden{
+    display: none;
+    transition: all 1s ease-in-out;
+    opacity: 0%;
+}
+//===============HEADER===============\\
