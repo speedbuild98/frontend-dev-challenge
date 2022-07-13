@@ -1,13 +1,15 @@
 import Nav from './components/Nav/Nav'
-import Header from './components/Header/Header'
+import Profile from './components/Profile/Profile'
+import Content from './components/Content/Content'
 import './App.scss';
 
 function App() {
   return (
-    <main className="App">
+    <div className='App'>
      <Nav />
-     <Header />
-    </main>
+     <Profile />
+     <Content />
+    </div>
   );
 }
 

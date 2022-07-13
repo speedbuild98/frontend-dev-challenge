@@ -2,6 +2,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 * {
     padding: 0;
@@ -56,6 +57,7 @@ iframe{
     position: fixed;
     width: 100%;
     z-index: 20;
+    box-shadow: $box-shadow;
 
     &__logo{
         cursor: pointer;
@@ -95,19 +97,22 @@ iframe{
     @include flex (center, left, column);
     background-color: $grey1;
     padding: $basic;
-    height: 100%;
+    height: fit-content;
+    box-shadow: $box-shadow;
     z-index: 10;
     transition: all .2s ease-in-out;
     position: absolute;
-    width: 0;
-    padding-top: 80px;
+    border-bottom: 2px solid $purple;
+    border-radius: 0px 0px 35px 35px;
+    position: fixed;
 
     &--visible{
         width: 100vw;
+        padding-top: 80px;
     }
 
     &--hidden{
-        width: 0%;
+        width: 0;
         padding: 0;
     }
 
@@ -208,4 +213,142 @@ iframe{
     transition: all 1s ease-in-out;
     opacity: 0%;
 }
-//===============HEADER===============\\
+//===============PROFILE===============\\
+.profile{
+    @include flex (center, center, row);
+    padding: 65px 0 $basic 0;
+
+    &__img{
+        @include flex (center, center, column);
+        padding: $basic;
+
+        &-avatar{
+            margin-bottom: $basic;
+        }
+
+        &-user{
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    &__text{
+        border-left: 3px solid $indigo;
+        width: 70%; 
+        padding-left: $basic;
+        font-size: .8rem;
+    }
+}
+//===============POST===============\\
+main{
+    @include flex (center, center, column);
+}
+
+.post{
+    @include flex (center, center, column);
+    margin: $basic;
+
+    &__img{
+        @include flex (center, center, column);
+        text-align: center;
+        
+        &-p{
+            background-color: $grey1;
+            width: 100%;
+            color:  $grey6;
+            font-size: .8rem;
+        }
+    }
+
+    &__title{
+        color: $indigo;
+        text-align: center;
+        line-height: 30.18px;
+        margin: $basic;
+        font-size: 2rem;
+    }
+
+    &__p{
+        font-family: $font-family-p;
+        font-weight: 400;
+        line-height: 24px;
+        font-size: .8rem;
+
+        &-strong{
+            color: $purple;
+            display: inline;
+        }
+    }
+
+    &__ad{
+        margin-bottom: $basic;
+    }
+}
+//===============NEWSLETTER===============\\
+.newsletter{
+    @include flex (center, center, row);
+    background-color: $light;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: $basic;
+    position: relative;
+    height: 50px;
+
+    &__img{
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        width: 95px;
+    }
+
+    &__caja{
+        @include flex (center, center, row);
+        position: relative;
+        margin-left: 100px;
+
+        &-p{
+            position: absolute;
+            left: 0;
+            top: -30px;
+            font-size: 12px;
+            line-height: 15px;
+
+            &-title{
+                font-family: $font-family-p;
+                font-weight: bold;
+            }
+        }
+
+        &-button{
+            @include flex (center, center, row);
+            position: absolute;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            color: $white;
+            background-color: $grey6;
+            padding: 5px;
+            right: $basic;
+            font-size: 10px;
+        }
+
+        &-input{
+                border: 1px solid $grey2;
+                width: 250px;
+                border-radius: 3px;
+                font-weight: 700;
+                color: $purple;
+                background-color: transparent;
+                padding: 10px;
+    
+                &::placeholder{
+                    color: $grey3;
+                    font-weight: 300;
+                }
+                
+                &:focus{
+                    border:2px solid $purple;
+                }
+        }
+    }
+}

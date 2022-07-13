@@ -24,28 +24,28 @@ const handleClick = () => setNav(!nav);
     <nav>
       <div className='navbar'>
              <div className='navbar__button' onClick={handleClick}>
-                        <img className='navbar__button-img' src={!nav ? menuIcon : xIcon} alt="Menu Icon" /> 
+                        <img className='navbar__button-img' src={!nav ? menuIcon : xIcon} alt='Menu Icon' /> 
              </div>
-            <img className='navbar__logo' src={logoMenu} alt="Logo Menu" />
-            <img className='navbar__button-search' src={searchIcon} alt="Logo Menu" />
+            <img className='navbar__logo' src={logoMenu} alt='Logo Menu' />
+            <img className='navbar__button-search' src={searchIcon} alt='Logo Menu' />
       </div>
       
       <div className={!nav ? 'navmenu navmenu--hidden' : 'navmenu navmenu--visible' } >
             <div className={!nav ? 'navmenu__search hidden' : 'navmenu__search visible' }>
-                  <input className='navmenu__search-input' autoFocus placeholder='Buscar' type="text" />
-                  <img className='navmenu__search-img' src={searchIcon2} alt="" />
+                  <input className='navmenu__search-input' autoFocus placeholder='Buscar' type='text' />
+                  <img className='navmenu__search-img' src={searchIcon2} alt='' />
             </div>
             <div className={!nav ? 'navmenu__container hidden' : 'navmenu__container visible'}>
-                  <a className="navmenu__container-title" href='/#'>Embarazo</a>
-                  <Links link='/#' text="Quiero ser mamá"/>
-                  <Links link='/#' text="Voy a ser mamá"/>
-                  <Links link='/#' text="Parto"/>
+                  <a className='navmenu__container-title' href='/#'>Embarazo</a>
+                  <Links link='/#' text='Quiero ser mamá'/>
+                  <Links link='/#' text='Voy a ser mamá'/>
+                  <Links link='/#' text='Parto'/>
             </div>
             <div className={!nav ? 'navmenu__container hidden' : 'navmenu__container visible'}>
-                  <a className="navmenu__container-title" href='/#' >Educación</a>
-                  <Links link='/#' text="Aprende a ser mamá"/>
-                  <Links link='/#' text="Educación para bebés"/>
-                  <Links link='/#' text="Educación para niños"/>
+                  <a className='navmenu__container-title' href='/#' >Educación</a>
+                  <Links link='/#' text='Aprende a ser mamá'/>
+                  <Links link='/#' text='Educación para bebés'/>
+                  <Links link='/#' text='Educación para niños'/>
             </div>
 
             <div className={!nav ? 'navmenu__social hidden' : 'navmenu__social visible'}>
