@@ -20,6 +20,10 @@ Me gustaría que se valore más las softskills que puedo llegar a tener que el c
 
 No realice el responsive design por problemas con mi tiempo, así que el mobile first lo hice en el tamaño del Iphone 12 PRO width="390px" height="844px".
 
+Deploy: https://gallardo-weremote.netlify.app/
+
+Figma: https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011
+
 <p align="center">
   <a href='https://weremote.net'>
     <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Header.jpeg" width="390" height="844"/>
