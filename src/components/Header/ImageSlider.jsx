@@ -9,11 +9,8 @@ const ImageSlider = ({ slides }) => {
 const [current, setCurrent] = useState(0)
 const length = slides.length
 
-//Slider rotation
-let timeInterval;
-
 function repeatSlider() {
-      timeInterval = setInterval(nextSlide, 5000);
+       setInterval(nextSlide, 5000);
     }
 
 const nextSlide = () =>{
