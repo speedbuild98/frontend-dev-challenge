@@ -25,7 +25,7 @@ Deploy: https://gallardo-weremote.netlify.app/
 Figma: https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011
 
 <p align="center">
-  <a href='https://weremote.net'>
+  <a href='https://devgallardo.netlify.app/'>
     <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Header.jpeg" width="390" height="844"/>
     <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Men%C3%BA.jpeg" width="390" height="844"/>
     <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/footer.jpeg" width="390" height="844"/>
