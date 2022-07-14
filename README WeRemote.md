@@ -7,10 +7,11 @@
 
 
 ## Descripción
-**Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.
-Utilicé React.js para componer la aplicación, haciendo énfasis en el mobile first y utilicé Sass para estilar los componentes.
-Intenté realizar un código limpio con la metodología de nomenclatura BEM en las clases.
-No realicé el diseño responsive aún.
+**Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.<br/>
+
+-Utilicé React.js para componer la aplicación, haciendo énfasis en el mobile first y utilicé Sass para estilar los componentes.<br/>
+-Intenté realizar un código limpio con la metodología de nomenclatura BEM en las clases. <br/>
+-No realicé el diseño responsive aún porque he tenido muy poco tiempo por mi trabajo actual.
 
 ## [FIGMA](https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011)
 
