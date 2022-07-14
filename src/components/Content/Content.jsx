@@ -2,18 +2,19 @@ import React from 'react';
 
 //components
 import Post from './Post';
-import Newsletter from './Newsletter';
+import Card from '../Card/Card';
 
 //Images
 import imgContent1 from '../../assets/sliderImage2.svg';
 import imgContent2 from '../../assets/sliderImage3.svg';
 import imgContent3 from '../../assets/sliderImage4.svg';
 import ad1 from '../../assets/ad1.svg';
+import card from '../../assets/cardImage.svg';
 
 
 const Content = () => {
   return (
-    <main className='main'>
+    <main className="main">
       <Post
         img={imgContent1}
         imgDescription={"Aquí estará la leyenda de la foto"}
@@ -29,7 +30,7 @@ const Content = () => {
         }
       />
 
-      <img className='main__img' src={ad1} alt="A dimg" />
+      <img className="main__img" src={ad1} alt="Ad img" />
 
       <Post
         img={imgContent2}
@@ -46,7 +47,7 @@ const Content = () => {
         }
       />
 
-      <img src={ad1} alt="A dimg" />
+      <img className="main__img" src={ad1} alt="Ad img" />
 
       <Post
         img={imgContent3}
@@ -63,9 +64,39 @@ const Content = () => {
         }
       />
 
-      <Newsletter />
+      <img className="main__img" src={ad1} alt="Ad img" />
+
+      <Card
+        img={card}
+        alt={"card img"}
+        topic={"Nutrición"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
+
+      <Card
+        img={imgContent2}
+        alt={"card img"}
+        topic={"Nutrición2"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
+
+      <Card
+        img={imgContent3}
+        alt={"card img"}
+        topic={"Nutrición3"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
     </main>
-  )
+  );
 };
 
 export default Content;

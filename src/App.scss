@@ -1,13 +1,10 @@
 @use './scss/' as *;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body{
@@ -213,10 +210,64 @@ iframe{
     transition: all 1s ease-in-out;
     opacity: 0%;
 }
+//===============HEADER===============\\
+.slider {
+    @include flex (center, center, row);
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+    
+    &__text{
+        position: absolute;
+        margin-left: $basic;
+
+        &-h1{
+            color: $white;
+            font-size: 1.5rem;
+            line-height: 25px;
+    
+            &--pink{
+                color: $pink;
+            }
+        }
+
+        &-p{
+            color: $white;
+            font-size: .7rem;
+            font-weight: 700;
+
+            &--2{
+                font-weight: 400;
+                font-size: .4rem;
+                width: 50%;
+                font-family: $font-family-p--2;
+            }
+        }
+    }
+
+    &__slide{
+        @include flex (center, center, row);
+        opacity: 0;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        position: relative;
+
+        &--active{
+            opacity: 1;
+            transition: 1s;
+            transition-timing-function: ease;
+        }
+    }
+
+    &__img{
+        width: 100%;
+    }
+}
+
 //===============PROFILE===============\\
 .profile{
     @include flex (center, center, row);
-    padding: 65px 0 $basic 0;
+    padding: $basic 0 $basic 0;
 
     &__img{
         @include flex (center, center, column);
@@ -288,13 +339,46 @@ iframe{
         margin-bottom: $basic;
     }
 }
+//===============CARD===============\\
+.card{
+    @include flex (center, center, row);
+    margin: $basic;
+
+    &__img{
+       border: 1px solid $pink;
+       margin-right: $basic;
+       width: 130px;
+    }
+
+    &__info{
+        @include flex (left, center, column);
+        
+        &-topic{
+            color: $pink;
+            font-weight: 700;
+            font-size: .5rem;
+            font-family: 'Source Sans Pro';
+        }
+
+        &-title{
+            font-size: .8rem;
+            font-weight: 700;
+            line-height: 15px;
+        }
+
+        &-text{
+            font-size: .6rem;
+            line-height: 15px;
+        }
+    }
+}
+
 //===============NEWSLETTER===============\\
 .newsletter{
     @include flex (center, center, row);
     background-color: $light;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin:30px 0px;
     position: relative;
     height: 50px;
 
@@ -334,6 +418,7 @@ iframe{
             padding: 5px;
             right: $basic;
             font-size: 10px;
+            cursor: pointer;
         }
 
         &-input{
@@ -356,3 +441,78 @@ iframe{
         }
     }
 }
+//===============FAQ===============\\
+.faq{
+    @include flex (center, center, column);
+    margin: 0 $basic;
+}
+
+.answers{
+    @include flex (center, center, column);
+
+    &__arrow{
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &--visible{
+            transform: rotate(180deg);
+            color: $pink;
+        }
+
+        &--hidden{
+            transform: rotate(180deg);
+        }
+    }
+
+    &__title{
+        @include flex (center, center, row);
+        font-weight: 700;
+        border-bottom: 1px dotted $black;         
+    }
+
+    &__p{
+        text-align: center;
+        margin: $basic 0;
+        transition: all .3s ease-in-out;
+
+        &--hidden{
+            font-size: 0;
+        }
+
+        &--visible{
+            font-size: .7rem;
+        }
+    }
+}
+//===============FOOTER===============\\
+.footer{
+    @include flex (center, center, column);
+    background-color: $green;
+    padding: $basic;
+
+    &__img{
+        width: 50%;
+    }
+
+    &__bar{
+        padding: $basic;
+    }
+
+    &__links{
+        @include flex (center, center, column);
+        color: $white;
+        font-weight: 400;
+        font-size: .8rem;
+
+        & a:hover{
+            color: $pink;
+        }
+    }
+
+    &__p{
+        color: $white;
+        font-size: .5rem;
+        text-align: center;
+    }
+}
+
