@@ -6,37 +6,28 @@
 <br />
 
 ## Descripción
-**Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.
+**Frontend DEV Challenge** Realicé la prueba técnica en el único tiempo que tuve disponible, mi trabajo actual me quita todo mi día, eso va a ser hasta que pueda tener mi primer trabajo como developer.
 
-## Pasos
-1. Crear un **fork** y entregar el enlace del repositorio de tu usuario. Evaluaremos la prueba en tu repositorio personal.
-2. Utilizar el diseño que debe finalizar y que está disponible en Figma (solo una pantalla): https://www.figma.com/file/FxX6dCznISsNkztnRa59Rf/Figma-Test?node-id=0%3A1
-3. Montar el código en HTML5, CSS3 y JS con efectos y animaciones.
-4. Usar buenas prácticas de HTML para SEO.
+Realicé el challenge diseñando Mobile First.
 
-## Buenas prácticas y sugerencias
-1. Mobile first.
-2. Layout responsive y cross-browser.
-3. Código legible y bien estructurado.
-4. HTML optimizado para SEO.
-5. Idioma del código y comentarios en inglés.
-6. Se puede utilizar una UI lib **solo para el GRID**, el resto debe ser desarrollado (colores, textos, botones, forms, paddings, margins, etc).
-7. **CSS**  
-a. Usar animaciones simples de hover, animaciones de mensaje del formulario o de búsqueda, etc. 
-b. Usar **nomenclatura BEM** para estilos.   
-c. Utilizar los estilos de color y textos **creados en Figma**.   
-d. Utilizar 8px GRID para espacios, paddings, margins.  
-e. Si se considera necesario, se pueden utilizar variables.  
-8. **JavaScript**  
-a. **No utilizar jQuery**, solamente JS puro ES6.  
-b. Utilizar la nomenclatura **camelCase**.  
-c. Como sugerencia: recomendamos crear una función de *alert* para enviar el formulario (puede ser envío falso, solo una alerta), un Listener de scroll para mostrar/ocultar algún botón o el banner fijo/flotante, click del FAQ/Accordion, abrir y cerrar un modal.
+Utilicé ReactJS sin uso de librerías extras.
 
-## Plus
-1. Componer el proyecto en **ReactJS** (no olvidar añadir el readme al proyecto final).
-2. SCSS/SASS
+Para los estilos de componentes utilicé Sass.
 
-## Fecha límite
-1. Siete días (7 días) a partir del correo electrónico de envío del Desafío Tech. La fecha exacta está en el correo electrónico.
-2. Notificar en el correo electrónico la finalización y enviar solamente la url del repositorio para evaluación.
-3. Utilizar siempre en el correo electrónico la opción "Responder a todos".
+Intenté hacer un código limpio aplicando la metodología de nomenclatura BEM.
+
+Me gustaría que se valore más las softskills que puedo llegar a tener que el challenge en si, puedo llegar a ser un gran asset para su compañía si me dan la oportunidad de desarrollarme.
+
+No realice el responsive design por problemas con mi tiempo, así que el mobile first lo hice en el tamaño del Iphone 12 PRO width="390px" height="844px".
+
+<p align="center">
+  <a href='https://weremote.net'>
+    <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Header.jpeg" width="390" height="844"/>
+    <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Men%C3%BA.jpeg" width="390" height="844"/>
+    <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/footer.jpeg" width="390" height="844"/>
+    <img src="https://github.com/speedbuild98/frontend-dev-challenge/blob/main/Deploy%20IMG/Alert.jpeg" width="390" height="844"/>
+  </a>
+</p>
+
+
+
