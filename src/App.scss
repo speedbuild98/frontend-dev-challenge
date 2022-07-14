@@ -240,8 +240,12 @@ iframe{
     }
 }
 //===============POST===============\\
-main{
+.main{
     @include flex (center, center, column);
+
+    &__img{
+        padding: 0 $basic;
+    }
 }
 
 .post{
@@ -290,7 +294,7 @@ main{
     background-color: $light;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: $basic;
+    margin-bottom: 50px;
     position: relative;
     height: 50px;
 

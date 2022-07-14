@@ -13,7 +13,7 @@ import ad1 from '../../assets/ad1.svg';
 
 const Content = () => {
   return (
-    <main>
+    <main className='main'>
       <Post
         img={imgContent1}
         imgDescription={"Aquí estará la leyenda de la foto"}
@@ -29,7 +29,7 @@ const Content = () => {
         }
       />
 
-      <img src={ad1} alt="A dimg" />
+      <img className='main__img' src={ad1} alt="A dimg" />
 
       <Post
         img={imgContent2}

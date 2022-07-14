@@ -6,7 +6,7 @@ import newletterImg from '../../assets/newletterImg.svg';
 const Newsletter = () => {
   return (
     <div className='newsletter'>
-        <img className='newsletter__img' src={newletterImg} alt="Newletter Image" />
+        <img className='newsletter__img' src={newletterImg} alt="computer img" />
         <div className='newsletter__caja'>
           <div className="newsletter__caja-p">
             <p className="newsletter__caja-p-title">Title</p>
