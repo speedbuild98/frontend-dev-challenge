@@ -343,6 +343,15 @@ iframe{
 .card{
     @include flex (center, center, row);
     margin: $basic;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    padding: $basic;
+    
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: $box-shadow;
+        border-radius: $basic;
+    }
 
     &__img{
        border: 1px solid $pink;
@@ -445,6 +454,7 @@ iframe{
 .faq{
     @include flex (center, center, column);
     margin: 0 $basic;
+    cursor: pointer;
 }
 
 .answers{
