@@ -20,6 +20,9 @@ function Nav() {
 const [nav, setNav] = useState(false);
 const handleClick = () => setNav(!nav);
 
+const [search, setSearch] = useState(false);
+const handleClick2 = () => setSearch(!search);
+
   return (
     <nav>
       <div className='navbar'>
@@ -27,12 +30,16 @@ const handleClick = () => setNav(!nav);
                         <img className='navbar__button-img' src={!nav ? menuIcon : xIcon} alt='Menu Icon' /> 
              </div>
             <img className='navbar__logo' src={logoMenu} alt='Logo Menu' />
-            <img className='navbar__button-search' src={searchIcon} alt='Logo Menu' />
+            <img onClick={handleClick2} className={!search ? "navbar__button-search navbar__button-search--visible" : "navbar__button-search navbar__button-search--hidden"} src={searchIcon} alt='Logo Menu' />
+      </div>
+
+      <div className={!search ? 'navbar__searchmenu navbar__searchmenu--hidden' : 'navbar__searchmenu navbar__searchmenu--visible'}>
+            <input placeholder='Buscar...' className='navbar__searchmenu-input' type="text" />
       </div>
       
       <div className={!nav ? 'navmenu navmenu--hidden' : 'navmenu navmenu--visible' } >
             <div className={!nav ? 'navmenu__search hidden' : 'navmenu__search visible' }>
-                  <input className='navmenu__search-input' autoFocus placeholder='Buscar' type='text' />
+                  <input className='navmenu__search-input' autoFocus placeholder='Buscar...' type='text' />
                   <img className='navmenu__search-img' src={searchIcon2} alt='' />
             </div>
             <div className={!nav ? 'navmenu__container hidden' : 'navmenu__container visible'}>

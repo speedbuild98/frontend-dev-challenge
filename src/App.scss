@@ -55,6 +55,7 @@ iframe{
     width: 100%;
     z-index: 20;
     box-shadow: $box-shadow;
+    height: 60px;
 
     &__logo{
         cursor: pointer;
@@ -82,9 +83,57 @@ iframe{
         &-search{
             transition: all .3s ease-in-out;
             cursor: pointer;
+    
+            &--hidden{
+                background-color: $indigo;
+                border-radius: 100%;
+                padding: $basic;
+            }
             
             &:hover{
                 transform: scale(1.1);
+            }
+        }
+    }
+
+    &__searchmenu{
+        @include flex (center, center, row);
+        width: 100%;
+        background-color: $grey1;
+        border-bottom: 3px solid $indigo;
+        transition: all .3s ease-in-out;
+        z-index: 10;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        box-shadow: $box-shadow;
+        border-radius: 0px 0px 30px 30px;
+
+        &--hidden{
+            transform: translate(0, 0);  
+        }
+
+        &--visible{
+            transform: translate(0, 58px);   
+        }
+
+        & input{
+            margin-top: -20px;
+            width: 60%;
+            height: 40px;
+            border-radius:0 0 20px 20px;
+            font-weight: 700;
+            text-align: center;
+            color: $pink;
+            border: 1px solid $grey3;
+    
+            &::placeholder{
+                color: $grey3;
+                font-weight: 400;
+            }
+            
+            &:focus{
+                border:2px solid $pink;
             }
         }
     }
@@ -102,6 +151,7 @@ iframe{
     border-bottom: 2px solid $purple;
     border-radius: 0px 0px 35px 35px;
     position: fixed;
+    height: 100%;
 
     &--visible{
         width: 100vw;
@@ -131,7 +181,7 @@ iframe{
         }
 
         &-input{
-            border: 1px solid $grey2;
+            border: 1px solid $grey3;
             width: 350px;
             height: 56px;
             border-radius: $basic;
@@ -261,6 +311,7 @@ iframe{
 
     &__img{
         width: 100%;
+        z-index: 40;
     }
 }
 
