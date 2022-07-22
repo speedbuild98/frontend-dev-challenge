@@ -1,13 +1,14 @@
-import React from 'react'
+//Dependencies
+import React from "react";
 
 //Icons and Images
-import profile from '../../assets/profile.svg';
+import profile from "../../assets/profile.svg";
 
 const Profile = () => {
   return (
     <div className="profile">
       <div className="profile__img">
-        <img src={profile} className="profile__img-avatar" alt='profile img'/>
+        <img src={profile} className="profile__img-avatar" alt="profile img" />
         <p className="profile__img-user">@Gallardo</p>
       </div>
       <p className="profile__text">
@@ -17,6 +18,6 @@ const Profile = () => {
       </p>
     </div>
   );
-}
+};
 
-export default Profile
+export default Profile;

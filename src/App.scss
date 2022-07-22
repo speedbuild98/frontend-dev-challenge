@@ -25,7 +25,7 @@ a {
 button,
 input {
     outline: 0;
-    padding: 8px;
+    padding: $basic;
 }
 
 ul {
@@ -34,10 +34,6 @@ ul {
 
 img {
     max-width: 100%;
-}
-
-iframe{
-    border: 0;
 }
 
 .container{
@@ -126,10 +122,11 @@ iframe{
             text-align: center;
             color: $pink;
             border: 1px solid $grey3;
+            background-color: $white;
     
             &::placeholder{
                 color: $grey3;
-                font-weight: 400;
+                font-weight: 600;
             }
             
             &:focus{
@@ -143,13 +140,8 @@ iframe{
     @include flex (center, left, column);
     background-color: $grey1;
     padding: $basic;
-    height: fit-content;
-    box-shadow: $box-shadow;
     z-index: 10;
     transition: all .2s ease-in-out;
-    position: absolute;
-    border-bottom: 2px solid $purple;
-    border-radius: 0px 0px 35px 35px;
     position: fixed;
     height: 100%;
 
@@ -432,7 +424,55 @@ iframe{
         }
     }
 }
+//===============QUOTES===============\\
+.quote{
+    @include flex (center, center, column);
+    font-family: $font-family-p;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px $basic;
 
+    &-img{
+        width: 35px;
+    }
+
+    &-text{
+        font-weight: 400;
+    }
+
+    &-name{
+        font-family: $font-family-p;
+        font-weight: 700;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            color: $pink;
+        }
+    }
+
+    &__buttons{
+        @include flex (center, center, row);
+        margin-top: 10px;
+        cursor: pointer;
+
+        &-dot{
+        background-color: $grey2;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin: 0 8px;
+        transition: all .3s ease-in-out;
+
+        &--active{
+            background-color: $grey4;    
+        }
+
+        &:hover{
+            background-color: $grey5;
+        }
+        }
+    }
+}
 //===============NEWSLETTER===============\\
 .newsletter{
     @include flex (center, center, row);
@@ -441,6 +481,67 @@ iframe{
     margin:30px 0px;
     position: relative;
     height: 50px;
+
+    &__container{
+        @include flex (center, center, column);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 140;
+        background-color: rgba($color: $indigo, $alpha: 0.6);
+        width: 100vw;
+        height: 100vh;
+
+        &__modal{
+            @include flex (center, center, column);
+            position: absolute;
+            background-color: $grey1;
+            z-index: 150;
+            border: 3px solid $pink;
+            border-radius: $basic;
+            padding:16px $basic;
+            margin: 0 auto;
+            box-shadow: $box-shadow;
+
+            &-title{
+                text-align: center;
+                font-size: 22px;
+                color: $purple;
+                padding: $basic;
+                border-bottom: 1px solid $grey4;
+                transition: all .3s ease-in;
+
+                &:hover{
+                    color: $pink;
+                }
+            }
+
+            &-ad{
+                margin-top: $basic;
+                width: 175px;
+                cursor: pointer;
+                border-radius: $basic;
+                box-shadow: $box-shadow;
+            }
+            
+            &-icon{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                transition: all .1s ease-in;
+
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
 
     &__img{
         position: absolute;
@@ -479,6 +580,11 @@ iframe{
             right: $basic;
             font-size: 10px;
             cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                background-color: $purple;
+            }
         }
 
         &-input{
@@ -489,6 +595,7 @@ iframe{
                 color: $purple;
                 background-color: transparent;
                 padding: 10px;
+                transition: all .3s ease-in;
     
                 &::placeholder{
                     color: $grey3;
@@ -510,6 +617,7 @@ iframe{
 
 .answers{
     @include flex (center, center, column);
+    margin: 0 $basic;
 
     &__arrow{
         cursor: pointer;
@@ -528,7 +636,12 @@ iframe{
     &__title{
         @include flex (center, center, row);
         font-weight: 700;
-        border-bottom: 1px dotted $black;         
+        border-bottom: 1px dotted $black; 
+        transition: all .3s ease-in-out;
+        
+        &:hover{
+            color: $pink;
+        }        
     }
 
     &__p{
@@ -550,9 +663,11 @@ iframe{
     @include flex (center, center, column);
     background-color: $green;
     padding: $basic;
+    text-align: center;
 
     &__img{
         width: 50%;
+        cursor: help;
     }
 
     &__bar{
@@ -576,4 +691,5 @@ iframe{
         text-align: center;
     }
 }
+
 

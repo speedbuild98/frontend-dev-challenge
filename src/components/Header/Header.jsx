@@ -1,16 +1,16 @@
-import React from 'react'
+//Dependencies
+import React from "react";
 
-//components
-import ImageSlider from './ImageSlider';
-import {SliderData} from './SliderData'
+//Components
+import ImageSlider from "./ImageSlider";
+import { SliderData } from "../Data/SliderData";
 
 const Header = () => {
-
   return (
     <header className="header">
-      <ImageSlider slides= {SliderData} />
+      <ImageSlider slides={SliderData} />
     </header>
   );
-}
+};
 
-export default Header
+export default Header;

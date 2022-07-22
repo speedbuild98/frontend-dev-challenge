@@ -1,7 +1,13 @@
 @use './variables' as *;
 
-@mixin mobile{
-      @media only screen and (max-width: $mobile-width){
+@mixin desktop{
+      @media only screen and (max-width: $desktop-width){
+             @content;
+      }
+}
+
+@mixin laptop{
+      @media only screen and (max-width: $laptop-width){
              @content;
       }
 }
@@ -11,3 +17,10 @@
              @content;
       }
 }
+
+@mixin mobile{
+      @media only screen and (max-width: $mobile-width){
+             @content;
+      }
+}
+

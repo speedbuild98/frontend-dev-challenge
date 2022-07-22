@@ -1,8 +1,9 @@
-import React from 'react'
+//Dependencies
+import React from "react";
 
 //Images
-import logoFooter from '../../assets/logoFooter.svg';
-import barFooter from '../../assets/barFooter.svg';
+import logoFooter from "../../assets/logoFooter.svg";
+import barFooter from "../../assets/barFooter.svg";
 
 const Footer = () => {
   return (
@@ -17,13 +18,13 @@ const Footer = () => {
       </p>
       <img src={barFooter} alt="" className="footer__bar" />
       <div className="footer__links">
-        <a href='/#'>Politica de cookies</a>
-        <a href='/#'>Politica de privacidad</a>
-        <a href='/#'>Terminos y condiciones de uso</a>
-        <a href='/#'>Clausula informativa y de consentimiento</a>
+        <a href="/#">Politica de cookies</a>
+        <a href="/#">Politica de privacidad</a>
+        <a href="/#">Terminos y condiciones de uso</a>
+        <a href="/#">Clausula informativa y de consentimiento</a>
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

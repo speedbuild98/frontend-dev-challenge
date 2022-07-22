@@ -1,20 +1,21 @@
-import React from 'react';
+//Dependencies
+import React from "react";
 
-//components
-import Post from './Post';
-import Card from '../Card/Card';
+//Components
+import Post from "../Post/Post";
+import Card from "../Card/Card";
+import Quotes from "../Quotes/Quotes";
 
 //Images
-import imgContent1 from '../../assets/sliderImage2.svg';
-import imgContent2 from '../../assets/sliderImage3.svg';
-import imgContent3 from '../../assets/sliderImage4.svg';
-import ad1 from '../../assets/ad1.svg';
-import card from '../../assets/cardImage.svg';
-
+import imgContent1 from "../../assets/sliderImage2.svg";
+import imgContent2 from "../../assets/sliderImage3.svg";
+import imgContent3 from "../../assets/sliderImage4.svg";
+import ad1 from "../../assets/ad1.svg";
+import card from "../../assets/cardImage.svg";
 
 const Content = () => {
   return (
-    <main className="main">
+    <main className="main container">
       <Post
         img={imgContent1}
         imgDescription={"Aquí estará la leyenda de la foto"}
@@ -63,6 +64,8 @@ const Content = () => {
           " Pueden hacer lo mismo con su propia colada, que separen su ropa blanca de la oscura y la lleven hacia los cubos correspondientes. De esta forma, progresivamente, los niños pueden comenzar a adquirir responsabilidades, lo que se trasladará también al uso de la tecnología, hacer los deberes, gestionar mejor su tiempo (trabajos para clase, tiempo para los amigos, juegos, etc.)."
         }
       />
+
+      <Quotes />
 
       <img className="main__img" src={ad1} alt="Ad img" />
 
