@@ -14,7 +14,7 @@ Realicé la prueba técnica en el único tiempo que tuve disponible, mi trabajo 
 
 -Realicé el challenge desarrollando Mobile First en base a lo diseñado en Figma.
 
--Se respeto los margin y padding de 8px en general.
+-Se respetó los margin y padding de 8px en general.
 
 -Utilicé ReactJS sin uso de otras librerías.
 
