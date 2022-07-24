@@ -393,7 +393,7 @@ img {
     height: 100%;
 
     @include lg{
-        @include flex (center, start, column);
+        @include flex (center, flex-start, column);
     } 
 }
 //===============PROFILE===============\\
