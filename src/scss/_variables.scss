@@ -1,36 +1,36 @@
 //Colors------------------------------
 
 //Basic
-$white:#ffffff;
-$black:#000000;
+$white: #ffffff;
+$black: #000000;
 
 //Grey/Neutral
-$grey1:#f1f1f1;
-$grey2:#e4e4e4;
-$grey3:#cacaca;
-$grey4:#b1b1b1;
-$grey5:#979797;
-$grey6:#7d7d7d;
-$grey7:#696969;
-$grey8:#555555;
-$grey9:#414141;
-$grey10:#2d2d2d;
-$grey11:#191919;
+$grey1: #f1f1f1;
+$grey2: #e4e4e4;
+$grey3: #cacaca;
+$grey4: #b1b1b1;
+$grey5: #979797;
+$grey6: #7d7d7d;
+$grey7: #696969;
+$grey8: #555555;
+$grey9: #414141;
+$grey10: #2d2d2d;
+$grey11: #191919;
 
 //Primary
-$indigo:#486db7;
-$pink:#f778b9;
-$purple:#b378ff;
-$light:#ecf0f7;
-$green:#265E6C;
+$indigo: #486db7;
+$pink: #f778b9;
+$purple: #b378ff;
+$light: #ecf0f7;
+$green: #265E6C;
 
 //Mains
-$txt-color:#414141;
-$bg-color:#ffffff;
+$txt-color: #414141;
+$bg-color: #ffffff;
 
 
 //Shadows------------------------------
-$box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 //Fonts------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
@@ -42,11 +42,13 @@ $font-family-p: 'Merriweather', serif;
 $font-family-p--2: 'Source Code Pro', monospace;
 
 //Widths------------------------------
+$xs-width: 320px;
 $sm-width: 640px;
 $md-width: 768px;
 $lg-width: 1024px;
 $xl-width: 1280px;
 $xxl-width: 1536px;
+$xxxl-width: 1920px;
 
 //Grid------------------------------
-$basic:8px;
+$basic: 8px;

@@ -1,32 +1,43 @@
 @use './variables' as *;
 
-@mixin sm{
-      @media only screen and (max-width: $sm-width){
-             @content;
+@mixin xs {
+      @media only screen and (max-width: $xs-width) {
+            @content;
       }
 }
 
-@mixin md{
-      @media only screen and (min-width: $md-width){
-             @content;
+@mixin sm {
+      @media only screen and (max-width: $sm-width) {
+            @content;
       }
 }
 
-@mixin lg{
-      @media only screen and (min-width: $lg-width){
-             @content;
+@mixin md {
+      @media only screen and (min-width: $md-width) {
+            @content;
       }
 }
 
-@mixin xl{
-      @media only screen and (min-width: $xl-width){
-             @content;
+@mixin lg {
+      @media only screen and (min-width: $lg-width) {
+            @content;
       }
 }
 
-@mixin xxl{
-      @media only screen and (min-width: $xxl-width){
-             @content;
+@mixin xl {
+      @media only screen and (min-width: $xl-width) {
+            @content;
       }
 }
 
+@mixin xxl {
+      @media only screen and (min-width: $xxl-width) {
+            @content;
+      }
+}
+
+@mixin xxxl {
+      @media only screen and (min-width: $xxxl-width) {
+            @content;
+      }
+}

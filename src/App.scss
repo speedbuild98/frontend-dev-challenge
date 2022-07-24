@@ -7,11 +7,11 @@
     user-select: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
@@ -41,127 +41,168 @@ img {
     max-width: 100%;
 }
 
-.mainContainer{
+.mainContainer {
     @include flex (top, center, row);
-    flex-direction: row-reverse;  
+    flex-direction: row-reverse;
 }
 
-.container{
-    @include lg{
+.container {
+    @include lg {
         max-width: 800px;
     }
 }
+
 //===============NAV===============\\
-.navbar{
-    @include flex (center, space-between, row);
+.navbar {
+    @include flex (center, space-around, row);
     background-color: $white;
     padding: $basic;
     position: fixed;
     width: 100%;
-    z-index: 20;
+    z-index: 8;
     height: 60px;
     border-bottom: 2px solid $indigo;
     transition: all .3s ease-in-out;
 
-   
-    &--active{
+
+    &--active {
         border-bottom: 2px solid $pink;
     }
 
-    &--hidden{
-        box-shadow: $box-shadow;
+    &--hidden {
+        box-shadow: none;
     }
 
 
-    &__logo{
+    &__logo {
         cursor: pointer;
         transition: all .3s ease-in-out;
 
-        &:hover{
+        &:hover {
             transform: scale(1.1)
         }
     }
 
-    &__button{
+    &__button {
         @include flex (center, center, row);
         transition: all .3s ease-in-out;
 
-        &:hover{
+        &:hover {
             opacity: 0.8;
         }
 
-        &-img{ 
+        &-img {
             cursor: pointer;
             width: 30px;
             height: 30px;
-        } 
-        
-        &-search{
+        }
+
+        &-search {
             transition: all .3s ease-in-out;
             cursor: pointer;
             padding: 6px;
-    
-            &--hidden{
-                transform: translate(-32px, 48px); 
-                background-color: $pink; 
+
+            &--hidden {
+                transform: translate(-32px, 48px);
+                background-color: $pink;
                 border-radius: 0px 0px 30px 30px;
-                @include md{
-                    transform: translate(-100px, 48px);
-                }         
             }
-            
-            &:hover{
-                background-color: $indigo; 
-                border-radius: 100%;         
+
+            @include xs {
+                &--hidden {
+                    transform: translate(0px, 48px);
+                }
+            }
+
+            @include sm {
+                &--hidden {
+                    transform: translate(0px, 48px);
+                }
+            }
+
+            @include md {
+                &--hidden {
+                    transform: translate(-10px, 48px);
+                }
+            }
+
+            @include lg {
+                &--hidden {
+                    transform: translate(-80px, 48px);
+                }
+            }
+
+            @include xl {
+                &--hidden {
+                    transform: translate(-170px, 48px);
+                }
+            }
+
+            @include xxl {
+                &--hidden {
+                    transform: translate(-250px, 48px);
+                }
+            }
+
+            @include xxxl {
+                &--hidden {
+                    transform: translate(-380px, 48px);
+                }
+            }
+
+            &:hover {
+                background-color: $indigo;
+                border-radius: 100%;
             }
         }
     }
 
-    &__searchmenu{
+    &__searchmenu {
         @include flex (center, center, row);
         width: 100%;
         background-color: $white;
         border-bottom: 3px solid $indigo;
         transition: all .3s ease-in-out;
-        z-index: 10;
+        z-index: 2;
         height: 60px;
         position: fixed;
         top: 0;
         box-shadow: $box-shadow;
         border-radius: 0px 0px 30px 30px;
 
-        &--hidden{
-            transform: translate(0, 0);  
+        &--hidden {
+            transform: translate(0, 0);
         }
 
-        &--visible{
-            transform: translate(0, 60px);   
+        &--visible {
+            transform: translate(0, 60px);
         }
 
-        & input{
+        & input {
             margin-top: -25px;
             width: 60%;
             height: 40px;
-            border-radius:0 0 20px 20px;
+            border-radius: 0 0 20px 20px;
             font-weight: 700;
             text-align: center;
             color: $pink;
             border: 1px solid $grey3;
             background-color: $white;
-    
-            &::placeholder{
+            max-width: 500px;
+
+            &::placeholder {
                 color: $grey3;
                 font-weight: 600;
             }
-            
-            &:focus{
-                border:2px solid $pink;
+
+            &:focus {
+                border: 2px solid $pink;
             }
         }
     }
 }
 
-.navmenu{
+.navmenu {
     @include flex (center, left, column);
     background-color: $grey1;
     padding: $basic;
@@ -169,22 +210,22 @@ img {
     transition: all .2s ease-in-out;
     position: fixed;
     height: 100%;
+    top: 60px;
 
-    &--visible{
+    &--visible {
         width: 100vw;
-        padding-top: 80px;
     }
 
-    &--hidden{
+    &--hidden {
         width: 0;
         padding: 0;
     }
 
-    &__search{
+    &__search {
         @include flex (center, flex-start, row);
         position: relative;
 
-        &-img{
+        &-img {
             position: absolute;
             right: 0;
             margin-right: $basic;
@@ -192,39 +233,39 @@ img {
             cursor: pointer;
             transition: all .3s ease-in-out;
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1)
             }
         }
 
-        &-input{
+        &-input {
             border: 1px solid $grey3;
             width: 350px;
             height: 56px;
             border-radius: $basic;
             font-weight: 700;
             color: $purple;
-    
-            &::placeholder{
+
+            &::placeholder {
                 color: $grey3;
                 font-weight: 300;
             }
-            
-            &:focus{
-                border:2px solid $purple;
+
+            &:focus {
+                border: 2px solid $purple;
             }
         }
     }
 
-    &__container{
+    &__container {
         @include flex (left, center, column);
         width: 100%;
 
-        @include lg{
+        @include lg {
             @include flex (center, center, column);
         }
 
-        &-title{
+        &-title {
             color: $purple;
             font-size: 1.2rem;
             font-weight: 700;
@@ -232,13 +273,13 @@ img {
             border-bottom: 1px solid $grey2;
             transition: all .3s ease-in-out;
 
-            &:hover{
+            &:hover {
                 color: $pink;
                 transform: translate(4px);
             }
         }
 
-        &-a{
+        &-a {
             @include flex (center, space-between, row);
             color: $grey8;
             font-size: 1rem;
@@ -246,27 +287,28 @@ img {
             padding: $basic;
             transition: all .3s ease-in-out;
 
-            &:hover{
+            &:hover {
                 color: $indigo;
                 font-weight: 700;
                 transform: translate(2px);
             }
         }
     }
-    
-    &__social{
+
+    &__social {
         @include flex (center, center, row);
 
-        @include lg{
+        @include lg {
             border-top: 1px solid $indigo;
             margin-top: 30px;
         }
-        &-icon{
+
+        &-icon {
             padding: $basic;
             color: $indigo;
             transition: all .5s ease-in-out;
 
-            &:hover{
+            &:hover {
                 transform: translate(0px, 4px);
                 color: $purple;
             }
@@ -274,204 +316,221 @@ img {
     }
 }
 
-.visible{
+.visible {
     transition: all 1s ease-in-out;
     display: flex;
     opacity: 100%;
 }
 
-.hidden{
+.hidden {
     display: none;
     transition: all 1s ease-in-out;
     opacity: 0%;
 }
+
 //===============HEADER===============\\
 .slider {
     @include flex (center, center, row);
     position: relative;
     width: 100%;
     padding-top: 60px;
+    max-width: 1056px;
+    margin: 0 auto;
 
-    &-arrow{
+    &-arrow {
         position: absolute;
         bottom: 100px;
         display: none;
+        transition: all .3s ease-in-out;
         animation: down 4s infinite ease-in-out;
         cursor: pointer;
+        filter: drop-shadow(4px 1px 2px $pink);
+
+        &:hover{
+            filter: drop-shadow(4px 1px 2px $purple);
+        }
 
         @keyframes down {
-            0%{
+            0% {
                 transform: translateY(0px);
             }
-            50%{
+
+            50% {
                 transform: translateY(20px);
             }
-            100%{
+
+            100% {
                 transform: translateY(0px);
             }
         }
 
-        &-icon{
-            width: 50px;
-            height: 50px;
+        &-icon {
+            width: 60px;
+            height: 60px;
         }
 
-        @include lg{
+        @include lg {
             display: flex;
         }
     }
-    
-    &__text{
+
+    &__text {
         position: absolute;
         left: 2%;
         margin-left: $basic;
 
-        &-h1{
+        &-h1 {
             color: $white;
             font-size: 1.5rem;
             line-height: 25px;
-    
-            &--pink{
+
+            &--pink {
                 color: $pink;
             }
 
-        @include md{
-            font-size: 2.4rem;
-            line-height: 40px;
-        }
+            @include md {
+                font-size: 2.4rem;
+                line-height: 40px;
+            }
         }
 
-        &-p{
+        &-p {
             color: $white;
             font-size: .7rem;
             font-weight: 700;
 
-            @include md{
+            @include md {
                 font-size: 1.3rem;
             }
 
-            &--2{
+            &--2 {
                 font-weight: 400;
                 font-size: .4rem;
                 width: 50%;
                 font-family: $font-family-p--2;
                 text-shadow: 1px 1px $black;
 
-                @include md{
+                @include md {
                     font-size: .7rem;
                 }
             }
         }
     }
 
-    &__slide{
+    &__slide {
         @include flex (center, center, row);
         opacity: 0;
         transition-duration: 1s;
         transition-timing-function: ease;
         position: relative;
 
-        &--active{
+        &--active {
             opacity: 1;
             transition: 1s;
             transition-timing-function: ease;
         }
     }
 
-    &__img{
+    &__img {
         width: 100%;
         z-index: 40;
+        border-radius: 0 0 20px 20px;
     }
 }
+
 //===============ASIDE===============\\ 
-.aside{
+.aside {
     border-left: 2px solid $indigo;
+    border-bottom: 1px solid $grey2;
+    border-top: 1px solid $grey2;
     width: 20%;
     margin: $basic;
     padding: $basic;
     display: none;
     height: 100%;
+    border-radius: $basic;
 
-    @include lg{
+    @include lg {
         @include flex (center, flex-start, column);
-    } 
+    }
 }
+
 //===============PROFILE===============\\
-.profile{
+.profile {
     @include flex (center, center, row);
     padding: $basic 0 $basic 0;
     margin: 0 auto;
     max-width: 400px;
 
-    @include lg{
+    @include lg {
         display: none;
 
-        &--2{
+        &--2 {
             @include flex (center, center, column);
-            border-top: 1px solid $grey3;
         }
     }
 
-    &__img{
+    &__img {
         @include flex (center, center, column);
         padding: $basic;
 
-        &-avatar{
+        &-avatar {
             margin-bottom: $basic;
         }
 
-        &-user{
+        &-user {
             text-align: center;
             font-weight: 600;
         }
     }
 
-    &__text{
+    &__text {
         border-left: 3px solid $indigo;
-        width: 70%; 
+        width: 70%;
         padding-left: $basic;
         font-size: .8rem;
 
-        @include lg{
+        @include lg {
             text-align: center;
             border: none;
             border-bottom: 1px solid $grey3;
-            padding: $basic 0; 
+            padding: $basic 0;
             font-size: .7rem;
             width: 100%
         }
     }
 }
+
 //===============POST===============\\
-.main{
+.main {
     @include flex (center, center, column);
 
-    &__img{
+    &__img {
         padding: 0 $basic;
 
-        @include lg{
+        @include lg {
             width: 100%;
         }
     }
 }
 
-.post{
+.post {
     @include flex (center, center, column);
     margin: $basic;
 
-    &__img{
+    &__img {
         @include flex (center, center, column);
         text-align: center;
-        
-        &-p{
+
+        &-p {
             background-color: $grey1;
             width: 100%;
-            color:  $grey6;
+            color: $grey6;
             font-size: .8rem;
         }
     }
 
-    &__title{
+    &__title {
         color: $indigo;
         text-align: center;
         line-height: 30.18px;
@@ -479,20 +538,21 @@ img {
         font-size: 2rem;
     }
 
-    &__p{
+    &__p {
         font-family: $font-family-p;
         font-weight: 400;
         line-height: 24px;
         font-size: .8rem;
 
-        &-strong{
+        &-strong {
             color: $purple;
             display: inline;
         }
     }
 }
+
 //===============QUOTES===============\\
-.quote{
+.quote {
     @include flex (center, center, column);
     font-family: $font-family-p;
     text-align: center;
@@ -500,113 +560,110 @@ img {
     margin: 30px $basic;
     max-width: 500px;
 
-    &-img{
+    &-img {
         width: 35px;
     }
 
-    &-text{
+    &-text {
         font-weight: 400;
     }
 
-    &-name{
+    &-name {
         font-family: $font-family-p;
         font-weight: 700;
         transition: all .3s ease-in-out;
 
-        &:hover{
+        &:hover {
             color: $pink;
         }
     }
 
-    &__buttons{
+    &__buttons {
         @include flex (center, center, row);
         margin-top: 10px;
         cursor: pointer;
 
-        &-dot{
-        background-color: $grey2;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        margin: 0 8px;
-        transition: all .3s ease-in-out;
+        &-dot {
+            background-color: $grey2;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            margin: 0 8px;
+            transition: all .3s ease-in-out;
 
-        &--active{
-            background-color: $grey4;    
-        }
+            &--active {
+                background-color: $grey4;
+            }
 
-        &:hover{
-            background-color: $grey5;
-        }
+            &:hover {
+                background-color: $grey5;
+            }
         }
     }
 }
+
 //===============CARD===============\\
-.card{
+.card {
     @include flex (center, center, row);
     margin: $basic;
     transition: all .2s ease-in-out;
     cursor: pointer;
     padding: $basic;
 
-    @include lg{
-        display: none;
-    }
-
-    &:hover{
+    &:hover {
         transform: scale(1.02);
         box-shadow: $box-shadow;
         border-radius: $basic;
     }
 
-    &__img{
-       border: 1px solid $pink;
-       margin-right: $basic;
-       width: 130px;
+    &__img {
+        border: 1px solid $pink;
+        margin-right: $basic;
+        width: 130px;
 
-       @include md{
-        width: 200px;
-        }     
+        @include md {
+            width: 200px;
+        }
     }
 
-    &__info{
+    &__info {
         @include flex (left, center, column);
-        
-        &-topic{
+
+        &-topic {
             color: $pink;
             font-weight: 700;
             font-size: .5rem;
             font-family: 'Source Sans Pro';
 
-            @include md{
+            @include md {
                 font-size: .8rem;
-            } 
+            }
         }
 
-        &-title{
+        &-title {
             font-size: .8rem;
             font-weight: 700;
             line-height: 15px;
 
-            @include md{
+            @include md {
                 font-size: 1.2rem;
                 margin-top: $basic;
-            } 
+            }
         }
 
-        &-text{
+        &-text {
             font-size: .6rem;
             line-height: 15px;
 
-            @include md{
+            @include md {
                 font-size: .8rem;
                 margin-top: $basic;
-            } 
+            }
         }
     }
 }
 
-.card--2{
+.card--2 {
     display: none;
     margin: $basic;
     transition: all .2s ease-in-out;
@@ -614,25 +671,25 @@ img {
     padding: $basic;
     width: 100%;
 
-    @include lg{
+    @include lg {
         @include flex (center, center, column);
     }
 
-    &:hover{
+    &:hover {
         transform: scale(1.02);
         box-shadow: $box-shadow;
         border-radius: $basic;
     }
 
-    &__img{
-       border: 1px solid $pink;
-       width: 100%;
+    &__img {
+        border: 1px solid $pink;
+        width: 100%;
     }
 
-    &__info{
+    &__info {
         @include flex (left, center, column);
-        
-        &-topic{
+
+        &-topic {
             color: $pink;
             font-weight: 700;
             font-size: .6rem;
@@ -640,34 +697,40 @@ img {
             margin-top: 4px;
         }
 
-        &-title{
+        &-title {
             font-size: .8rem;
             font-weight: 700;
             line-height: 15px;
         }
 
-        &-text{
+        &-text {
             line-height: 15px;
             font-size: .65rem;
             margin-top: 4px;
         }
     }
 }
+
 //===============NEWSLETTER===============\\
-.newsletter{
+.newsletter {
     @include flex (center, center, row);
     background-color: $light;
     width: 100%;
-    margin:30px 0px;
+    margin: 30px 0px;
     position: relative;
     height: 50px;
 
-    @include lg{
+    @include lg {
         height: 100px;
         margin-top: 50px;
     }
 
-    &__container{
+    @include xxl {
+        height: 130px;
+        margin-top: 90px;
+    }
+
+    &__container {
         @include flex (center, center, column);
         position: fixed;
         top: 0;
@@ -680,18 +743,18 @@ img {
         width: 100vw;
         height: 100vh;
 
-        &__modal{
+        &__modal {
             @include flex (center, center, column);
             position: absolute;
             background-color: $grey1;
             z-index: 150;
             border: 3px solid $pink;
             border-radius: $basic;
-            padding:16px $basic;
+            padding: 16px $basic;
             margin: 0 auto;
             box-shadow: $box-shadow;
 
-            &-title{
+            &-title {
                 text-align: center;
                 font-size: 22px;
                 color: $purple;
@@ -699,20 +762,20 @@ img {
                 border-bottom: 1px solid $grey4;
                 transition: all .3s ease-in;
 
-                &:hover{
+                &:hover {
                     color: $pink;
                 }
             }
 
-            &-ad{
+            &-ad {
                 margin-top: $basic;
                 width: 175px;
                 cursor: pointer;
                 border-radius: $basic;
                 box-shadow: $box-shadow;
             }
-            
-            &-icon{
+
+            &-icon {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -721,55 +784,77 @@ img {
                 cursor: pointer;
                 transition: all .1s ease-in;
 
-                &:hover{
+                &:hover {
                     opacity: .7;
                 }
             }
         }
     }
 
-    &__img{
+    &__img {
         position: absolute;
         top: -20px;
         left: 10px;
         width: 95px;
 
-        @include md{
+        @include md {
             left: 100px;
         }
 
-        @include lg{
-            left: 150px;
-            width: 150px;
+        @include lg {
+            left: 200px;
             top: -35px;
+            width: 150px;
+        }
+
+        @include xxl {
+            top: -40px;
+            left: 200px;
+            width: 200px;
+        }
+
+        @include xxxl {
+            width: 200px;
+            top: -60px;
+            left: 250px;
         }
     }
 
-    &__caja{
+    &__caja {
         @include flex (center, center, row);
         position: relative;
         margin-left: 100px;
 
-        &-p{
+        &-p {
             position: absolute;
             left: 0;
             top: -30px;
             font-size: 12px;
             line-height: 15px;
 
-            @include lg{
+            @include xs {
+                font-size: 10px;
+            }
+
+            @include lg {
                 font-size: 18px;
                 top: -60px;
                 line-height: 20px;
             }
 
-            &-title{
+            @include xxxl {
+                font-size: 25px;
+                top: -60px;
+                line-height: 20px;
+            }
+
+            &-title {
                 font-family: $font-family-p;
                 font-weight: bold;
             }
         }
 
-        &-button{
+        &-button {
             @include flex (center, center, row);
             position: absolute;
             height: 30px;
@@ -783,145 +868,200 @@ img {
             cursor: pointer;
             transition: all .3s ease-in-out;
 
-            @include lg{
+            @include xs {
+                font-size: 7px;
+            }
+
+            @include lg {
                 height: 40px;
                 font-size: 15px;
             }
 
-            &:hover{
+            @include xxxl {
+                height: 50px;
+                font-size: 25px;
+            }
+
+            &:hover {
                 background-color: $purple;
             }
         }
 
-        &-input{
-                border: 1px solid $grey2;
-                width: 250px;
-                border-radius: 3px;
-                font-weight: 700;
-                color: $purple;
-                background-color: transparent;
-                padding: 10px;
-                transition: all .3s ease-in;
-                
-                @include md{
-                    width: 400px;
-                }
+        &-input {
+            border: 1px solid $grey2;
+            width: 250px;
+            border-radius: 3px;
+            font-weight: 700;
+            color: $purple;
+            background-color: transparent;
+            padding: 10px;
+            transition: all .3s ease-in;
 
-                @include lg{
-                    width: 500px;
-                    padding: 15px;
-                }
-    
-                &::placeholder{
-                    color: $grey3;
-                    font-weight: 300;
-                }
-                
-                &:focus{
-                    border:2px solid $purple;
-                }
+            @include xs {
+                width: 150px;
+                font-size: .6rem;
+            }
+
+            @include md {
+                width: 400px;
+            }
+
+            @include lg {
+                width: 500px;
+                padding: 15px;
+            }
+
+            @include xxl {
+                width: 650px;
+                font-size: 1rem;
+            }
+
+            @include xxxl {
+                width: 800px;
+                font-size: 1.7rem;
+            }
+
+            &::placeholder {
+                color: $grey3;
+                font-weight: 300;
+            }
+
+            &:focus {
+                border: 2px solid $purple;
+            }
         }
     }
 }
+
 //===============FAQ===============\\
-.faq{
+.faq {
     @include flex (center, center, column);
     margin: 0 $basic;
     cursor: pointer;
+    margin: 50px $basic;
 }
 
-.answers{
+.answers {
     @include flex (center, center, column);
-    margin: 0 $basic;
+    text-align: center;
 
-    &__arrow{
+    &__arrow {
         cursor: pointer;
         transition: all .3s ease-in-out;
 
-        &--visible{
+        &--visible {
             transform: rotate(180deg);
             color: $pink;
         }
 
-        &--hidden{
+        &--hidden {
             transform: rotate(180deg);
         }
     }
 
-    &__title{
+    &__title {
         @include flex (center, center, row);
         font-weight: 700;
-        border-bottom: 1px dotted $black; 
+        border-bottom: 1px dotted $black;
         transition: all .3s ease-in-out;
 
-        @include lg{
+        @include xs {
+            font-size: .7rem;
+        }
+
+        @include sm {
+            font-size: .8rem;
+        }
+
+        @include lg {
             font-size: 1.2rem;
         }
-        
-        &:hover{
+
+        @include xxl {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
             color: $pink;
-        }        
+        }
     }
 
-    &__p{
+    &__p {
         text-align: center;
         margin: $basic 0;
         transition: all .3s ease-in-out;
         font-size: .7rem;
         max-width: 500px;
 
-        @include lg{
+        @include xs {
+            font-size: .6rem;
+        }
+
+        @include lg {
             font-size: .8rem;
         }
 
-        &--hidden{
+        &--hidden {
             font-size: 0;
         }
     }
 }
+
 //===============FOOTER===============\\
-.footer{
+.footer {
     @include flex (center, center, column);
     background-color: $green;
     padding: $basic;
     text-align: center;
 
-    &__img{
+    &__img {
         width: 50%;
         cursor: help;
+        max-width: 500px;
     }
 
-    &__bar{
+    &__bar {
         padding: $basic;
+
+        @include lg {
+            width: 80%
+        }
     }
 
-    &__links{
+    &__links {
         @include flex (center, center, column);
         color: $white;
         font-weight: 400;
         font-size: .8rem;
 
-        & a:hover{
+        & a:hover {
             color: $pink;
+        }
+
+        @include xxxl {
+            font-size: 1rem;
         }
     }
 
-    &__p{
+    &__p {
         color: $white;
         font-size: .5rem;
         text-align: center;
 
-        @include md{
+        @include md {
             max-width: 400px;
             font-size: .6rem;
-        }  
-        
-        @include lg{
+        }
+
+        @include lg {
             font-size: .7rem;
+            max-width: 600px;
+        }
+
+        @include xxxl {
+            font-size: 1rem;
+            max-width: 900px;
         }
 
     }
 }
-
-
-

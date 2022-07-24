@@ -54,7 +54,7 @@ const ImageSlider = ({ slides }) => {
         </p>
       </div>
       <a id="arrow" className="slider-arrow" href="#arrow">
-        <Unicons.UilArrowDown color="#f778b9" className="slider-arrow-icon"/>
+        <Unicons.UilArrowDown color="#ffffff" className="slider-arrow-icon"/>
       </a>
     </div>
   );

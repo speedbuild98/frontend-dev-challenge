@@ -1,6 +1,6 @@
 {
-  "short_name": "WeRemote",
-  "name": "WeRemote - Frontend Challenge",
+  "short_name": "WeRemote - Dev Gallardo",
+  "name": "WeRemote - Frontend Challenge - Gallardo",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#b378ff",
+  "theme_color": "#486db7",
   "background_color": "#ffffff"
 }

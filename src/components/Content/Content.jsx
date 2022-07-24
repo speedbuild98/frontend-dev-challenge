@@ -98,6 +98,36 @@ const Content = () => {
           "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
         }
       />
+
+      <Card
+        img={card}
+        alt={"card img"}
+        topic={"Nutrición4"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
+
+      <Card
+        img={imgContent2}
+        alt={"card img"}
+        topic={"Nutrición5"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
+
+      <Card
+        img={imgContent3}
+        alt={"card img"}
+        topic={"Nutrición6"}
+        title={"Colapso mental: cuando siento el peso del mundo sobre mí"}
+        text={
+          "A veces nos sentimos como Atlas, aquel titán al que Zeus castigó y le obligó a llevar el peso de…"
+        }
+      />
     </main>
   );
 };
