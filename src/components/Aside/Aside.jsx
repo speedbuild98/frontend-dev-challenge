@@ -6,7 +6,6 @@ import Card2 from '../Card/Card2';
 
 //Icons and Images
 import profile from "../../assets/profile.svg";
-import imgContent1 from "../../assets/sliderImage2.svg";
 import imgContent2 from "../../assets/sliderImage3.svg";
 import imgContent3 from "../../assets/sliderImage4.svg";
 import ADTWO from "../../assets/ADTWO.svg";
