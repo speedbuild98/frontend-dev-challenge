@@ -8,17 +8,27 @@
 ## Descripción
 Realicé la prueba técnica en el único tiempo que tuve disponible, mi trabajo actual me quita todo mi día, eso va a ser hasta que pueda tener mi primer trabajo como developer.
 
--Realicé el challenge diseñando Mobile First.
+### UPDATE: Me dieron una semana más así que aproveche mi día libre del sábado para seguir mejorando el challenge, espero les agrade y me sirva para seguir creciendo como desarrollador. ¡Gracias por su tiempo!
 
--Utilicé ReactJS sin uso de librerías extras.
+# ¿Qué hice?
+
+-Realicé el challenge desarrollando Mobile First en base a lo diseñado en Figma.
+
+-Se respeto los margin y padding de 8px en general.
+
+-Utilicé ReactJS sin uso de otras librerías.
 
 -Para los estilos de componentes utilicé Sass.
 
--Intenté hacer un código limpio aplicando la metodología de nomenclatura BEM.
+-Uso de variables, mixin y 6 breakpoints para el responsive design.
 
-Me gustaría que se valore más las softskills que puedo llegar a tener que el challenge en si, puedo llegar a ser un gran asset para su compañía si me dan la oportunidad de desarrollarme y de poder utilizar todo mi día trabajando para ustedes, puedo aprender cualquier tecnología que sea necesaria.
+-Intenté hacer un código limpio aplicando la metodología de nomenclatura BEM lo cual ayudó a tener un mejor desarrollo con Sass.
 
-No realice el responsive design por problemas con mi tiempo, así que el mobile first lo hice en el tamaño del Iphone 12 PRO width="390px" height="844px" y es el único que se puede ver, les pido disculpas.
+-Todos los componentes tienen su propia folder para mantener un orden.
+
+-Intenté dar un buen UX/UI respetando la base de diseño que me dieron con sus respectivos colores.
+
+-El código está en inglés.
 
 Deploy: https://gallardo-weremote.netlify.app/
 
