@@ -5,7 +5,7 @@ import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 
 //Images
-import ad2 from "../../assets/ad2.svg";
+import ADTWO from "../../assets/ADTWO.svg";
 
 const Modal = ({ showModal, setShowModal }) => {
   return (
@@ -22,7 +22,7 @@ const Modal = ({ showModal, setShowModal }) => {
             </h5>
             <img
               className="newsletter__container__modal-ad"
-              src={ad2}
+              src={ADTWO}
               alt="ad"
             />
           </div>

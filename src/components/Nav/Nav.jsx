@@ -23,7 +23,7 @@ function Nav() {
 
   return (
     <nav>
-      <div className="navbar">
+      <div className={!search ? "navbar navbar--hidden" : "navbar navbar--active"}>
         <div className="navbar__button" onClick={handleClick}>
           <img
             className="navbar__button-img"

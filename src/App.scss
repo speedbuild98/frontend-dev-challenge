@@ -7,10 +7,15 @@
     user-select: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
+    transition: all .3s ease-in;
 
     background-color: $white;
     color: $txt-color;
@@ -36,13 +41,17 @@ img {
     max-width: 100%;
 }
 
-.container{
-    max-width: 1660px;
-    margin: auto;
+.mainContainer{
+    @include flex (top, center, row);
+    flex-direction: row-reverse;  
 }
 
+.container{
+    @include lg{
+        max-width: 800px;
+    }
+}
 //===============NAV===============\\
-
 .navbar{
     @include flex (center, space-between, row);
     background-color: $white;
@@ -50,8 +59,19 @@ img {
     position: fixed;
     width: 100%;
     z-index: 20;
-    box-shadow: $box-shadow;
     height: 60px;
+    border-bottom: 2px solid $indigo;
+    transition: all .3s ease-in-out;
+
+   
+    &--active{
+        border-bottom: 2px solid $pink;
+    }
+
+    &--hidden{
+        box-shadow: $box-shadow;
+    }
+
 
     &__logo{
         cursor: pointer;
@@ -79,15 +99,20 @@ img {
         &-search{
             transition: all .3s ease-in-out;
             cursor: pointer;
+            padding: 6px;
     
             &--hidden{
-                background-color: $indigo;
-                border-radius: 100%;
-                padding: $basic;
+                transform: translate(-32px, 48px); 
+                background-color: $pink; 
+                border-radius: 0px 0px 30px 30px;
+                @include md{
+                    transform: translate(-100px, 48px);
+                }         
             }
             
             &:hover{
-                transform: scale(1.1);
+                background-color: $indigo; 
+                border-radius: 100%;         
             }
         }
     }
@@ -95,7 +120,7 @@ img {
     &__searchmenu{
         @include flex (center, center, row);
         width: 100%;
-        background-color: $grey1;
+        background-color: $white;
         border-bottom: 3px solid $indigo;
         transition: all .3s ease-in-out;
         z-index: 10;
@@ -110,11 +135,11 @@ img {
         }
 
         &--visible{
-            transform: translate(0, 58px);   
+            transform: translate(0, 60px);   
         }
 
         & input{
-            margin-top: -20px;
+            margin-top: -25px;
             width: 60%;
             height: 40px;
             border-radius:0 0 20px 20px;
@@ -195,6 +220,10 @@ img {
         @include flex (left, center, column);
         width: 100%;
 
+        @include lg{
+            @include flex (center, center, column);
+        }
+
         &-title{
             color: $purple;
             font-size: 1.2rem;
@@ -228,6 +257,10 @@ img {
     &__social{
         @include flex (center, center, row);
 
+        @include lg{
+            border-top: 1px solid $indigo;
+            margin-top: 30px;
+        }
         &-icon{
             padding: $basic;
             color: $indigo;
@@ -258,9 +291,39 @@ img {
     position: relative;
     width: 100%;
     padding-top: 60px;
+
+    &-arrow{
+        position: absolute;
+        bottom: 100px;
+        display: none;
+        animation: down 4s infinite ease-in-out;
+        cursor: pointer;
+
+        @keyframes down {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+
+        &-icon{
+            width: 50px;
+            height: 50px;
+        }
+
+        @include lg{
+            display: flex;
+        }
+    }
     
     &__text{
         position: absolute;
+        left: 2%;
         margin-left: $basic;
 
         &-h1{
@@ -271,6 +334,11 @@ img {
             &--pink{
                 color: $pink;
             }
+
+        @include md{
+            font-size: 2.4rem;
+            line-height: 40px;
+        }
         }
 
         &-p{
@@ -278,11 +346,20 @@ img {
             font-size: .7rem;
             font-weight: 700;
 
+            @include md{
+                font-size: 1.3rem;
+            }
+
             &--2{
                 font-weight: 400;
                 font-size: .4rem;
                 width: 50%;
                 font-family: $font-family-p--2;
+                text-shadow: 1px 1px $black;
+
+                @include md{
+                    font-size: .7rem;
+                }
             }
         }
     }
@@ -306,11 +383,34 @@ img {
         z-index: 40;
     }
 }
+//===============ASIDE===============\\ 
+.aside{
+    border-left: 2px solid $indigo;
+    width: 20%;
+    margin: $basic;
+    padding: $basic;
+    display: none;
+    height: 100%;
 
+    @include lg{
+        @include flex (center, start, column);
+    } 
+}
 //===============PROFILE===============\\
 .profile{
     @include flex (center, center, row);
     padding: $basic 0 $basic 0;
+    margin: 0 auto;
+    max-width: 400px;
+
+    @include lg{
+        display: none;
+
+        &--2{
+            @include flex (center, center, column);
+            border-top: 1px solid $grey3;
+        }
+    }
 
     &__img{
         @include flex (center, center, column);
@@ -331,6 +431,15 @@ img {
         width: 70%; 
         padding-left: $basic;
         font-size: .8rem;
+
+        @include lg{
+            text-align: center;
+            border: none;
+            border-bottom: 1px solid $grey3;
+            padding: $basic 0; 
+            font-size: .7rem;
+            width: 100%
+        }
     }
 }
 //===============POST===============\\
@@ -339,6 +448,10 @@ img {
 
     &__img{
         padding: 0 $basic;
+
+        @include lg{
+            width: 100%;
+        }
     }
 }
 
@@ -377,52 +490,6 @@ img {
             display: inline;
         }
     }
-
-    &__ad{
-        margin-bottom: $basic;
-    }
-}
-//===============CARD===============\\
-.card{
-    @include flex (center, center, row);
-    margin: $basic;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    padding: $basic;
-    
-    &:hover{
-        transform: scale(1.02);
-        box-shadow: $box-shadow;
-        border-radius: $basic;
-    }
-
-    &__img{
-       border: 1px solid $pink;
-       margin-right: $basic;
-       width: 130px;
-    }
-
-    &__info{
-        @include flex (left, center, column);
-        
-        &-topic{
-            color: $pink;
-            font-weight: 700;
-            font-size: .5rem;
-            font-family: 'Source Sans Pro';
-        }
-
-        &-title{
-            font-size: .8rem;
-            font-weight: 700;
-            line-height: 15px;
-        }
-
-        &-text{
-            font-size: .6rem;
-            line-height: 15px;
-        }
-    }
 }
 //===============QUOTES===============\\
 .quote{
@@ -431,6 +498,7 @@ img {
     text-align: center;
     font-size: 14px;
     margin: 30px $basic;
+    max-width: 500px;
 
     &-img{
         width: 35px;
@@ -473,6 +541,118 @@ img {
         }
     }
 }
+//===============CARD===============\\
+.card{
+    @include flex (center, center, row);
+    margin: $basic;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    padding: $basic;
+
+    @include lg{
+        display: none;
+    }
+
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: $box-shadow;
+        border-radius: $basic;
+    }
+
+    &__img{
+       border: 1px solid $pink;
+       margin-right: $basic;
+       width: 130px;
+
+       @include md{
+        width: 200px;
+        }     
+    }
+
+    &__info{
+        @include flex (left, center, column);
+        
+        &-topic{
+            color: $pink;
+            font-weight: 700;
+            font-size: .5rem;
+            font-family: 'Source Sans Pro';
+
+            @include md{
+                font-size: .8rem;
+            } 
+        }
+
+        &-title{
+            font-size: .8rem;
+            font-weight: 700;
+            line-height: 15px;
+
+            @include md{
+                font-size: 1.2rem;
+                margin-top: $basic;
+            } 
+        }
+
+        &-text{
+            font-size: .6rem;
+            line-height: 15px;
+
+            @include md{
+                font-size: .8rem;
+                margin-top: $basic;
+            } 
+        }
+    }
+}
+
+.card--2{
+    display: none;
+    margin: $basic;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    padding: $basic;
+    width: 100%;
+
+    @include lg{
+        @include flex (center, center, column);
+    }
+
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: $box-shadow;
+        border-radius: $basic;
+    }
+
+    &__img{
+       border: 1px solid $pink;
+       width: 100%;
+    }
+
+    &__info{
+        @include flex (left, center, column);
+        
+        &-topic{
+            color: $pink;
+            font-weight: 700;
+            font-size: .6rem;
+            font-family: 'Source Sans Pro';
+            margin-top: 4px;
+        }
+
+        &-title{
+            font-size: .8rem;
+            font-weight: 700;
+            line-height: 15px;
+        }
+
+        &-text{
+            line-height: 15px;
+            font-size: .65rem;
+            margin-top: 4px;
+        }
+    }
+}
 //===============NEWSLETTER===============\\
 .newsletter{
     @include flex (center, center, row);
@@ -481,6 +661,11 @@ img {
     margin:30px 0px;
     position: relative;
     height: 50px;
+
+    @include lg{
+        height: 100px;
+        margin-top: 50px;
+    }
 
     &__container{
         @include flex (center, center, column);
@@ -548,6 +733,16 @@ img {
         top: -20px;
         left: 10px;
         width: 95px;
+
+        @include md{
+            left: 100px;
+        }
+
+        @include lg{
+            left: 150px;
+            width: 150px;
+            top: -35px;
+        }
     }
 
     &__caja{
@@ -561,6 +756,12 @@ img {
             top: -30px;
             font-size: 12px;
             line-height: 15px;
+
+            @include lg{
+                font-size: 18px;
+                top: -60px;
+                line-height: 20px;
+            }
 
             &-title{
                 font-family: $font-family-p;
@@ -582,6 +783,11 @@ img {
             cursor: pointer;
             transition: all .3s ease-in-out;
 
+            @include lg{
+                height: 40px;
+                font-size: 15px;
+            }
+
             &:hover{
                 background-color: $purple;
             }
@@ -596,6 +802,15 @@ img {
                 background-color: transparent;
                 padding: 10px;
                 transition: all .3s ease-in;
+                
+                @include md{
+                    width: 400px;
+                }
+
+                @include lg{
+                    width: 500px;
+                    padding: 15px;
+                }
     
                 &::placeholder{
                     color: $grey3;
@@ -638,6 +853,10 @@ img {
         font-weight: 700;
         border-bottom: 1px dotted $black; 
         transition: all .3s ease-in-out;
+
+        @include lg{
+            font-size: 1.2rem;
+        }
         
         &:hover{
             color: $pink;
@@ -648,13 +867,15 @@ img {
         text-align: center;
         margin: $basic 0;
         transition: all .3s ease-in-out;
+        font-size: .7rem;
+        max-width: 500px;
+
+        @include lg{
+            font-size: .8rem;
+        }
 
         &--hidden{
             font-size: 0;
-        }
-
-        &--visible{
-            font-size: .7rem;
         }
     }
 }
@@ -689,7 +910,18 @@ img {
         color: $white;
         font-size: .5rem;
         text-align: center;
+
+        @include md{
+            max-width: 400px;
+            font-size: .6rem;
+        }  
+        
+        @include lg{
+            font-size: .7rem;
+        }
+
     }
 }
+
 
 

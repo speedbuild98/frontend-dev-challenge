@@ -6,17 +6,24 @@ import Header from "./components/Header/Header";
 import Newsletter from "./components/Newsletter/Newsletter";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
+import Aside from "./components/Aside/Aside";
 
 //Styles
 import "./App.scss";
+
 
 function App() {
   return (
     <div className="App">
       <Nav />
       <Header />
-      <Profile />
-      <Content />
+      <div className="mainContainer">
+      <Aside />
+        <div className="container">
+          <Profile />
+          <Content />
+        </div>
+      </div>
       <Newsletter />
       <FAQ />
       <Footer />

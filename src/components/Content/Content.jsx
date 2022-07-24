@@ -10,7 +10,7 @@ import Quotes from "../Quotes/Quotes";
 import imgContent1 from "../../assets/sliderImage2.svg";
 import imgContent2 from "../../assets/sliderImage3.svg";
 import imgContent3 from "../../assets/sliderImage4.svg";
-import ad1 from "../../assets/ad1.svg";
+import ADONE from "../../assets/ADONE.svg";
 import card from "../../assets/cardImage.svg";
 
 const Content = () => {
@@ -31,7 +31,7 @@ const Content = () => {
         }
       />
 
-      <img className="main__img" src={ad1} alt="Ad img" />
+      <img className="main__img" src={ADONE} alt="Ad img" />
 
       <Post
         img={imgContent2}
@@ -48,7 +48,7 @@ const Content = () => {
         }
       />
 
-      <img className="main__img" src={ad1} alt="Ad img" />
+      <img className="main__img" src={ADONE} alt="Ad img" />
 
       <Post
         img={imgContent3}
@@ -67,7 +67,7 @@ const Content = () => {
 
       <Quotes />
 
-      <img className="main__img" src={ad1} alt="Ad img" />
+      <img className="main__img" src={ADONE} alt="Ad img" />
 
       <Card
         img={card}

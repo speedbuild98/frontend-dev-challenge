@@ -4,6 +4,9 @@ import React, { useState } from "react";
 //Data
 import { SliderData } from "../Data/SliderData";
 
+//Unicons
+import * as Unicons from "@iconscout/react-unicons";
+
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -50,6 +53,9 @@ const ImageSlider = ({ slides }) => {
           además de adherirse a estrictos códigos de ética y confidencialidad.
         </p>
       </div>
+      <a id="arrow" className="slider-arrow" href="#arrow">
+        <Unicons.UilArrowDown color="#f778b9" className="slider-arrow-icon"/>
+      </a>
     </div>
   );
 };
