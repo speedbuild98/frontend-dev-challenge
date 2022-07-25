@@ -1,5 +1,5 @@
 //Dependencies
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //Data
 import { SliderData } from "../Data/SliderData";
@@ -7,14 +7,18 @@ import { SliderData } from "../Data/SliderData";
 //Unicons
 import * as Unicons from "@iconscout/react-unicons";
 
+
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  setInterval(() => {
-    nextSlide();
-    console.log("cambio");
-  }, 1000000000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('This will run every 6 seconds!')
+      nextSlide();
+    }, 6000);
+    return () => clearInterval(interval);
+  },);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
