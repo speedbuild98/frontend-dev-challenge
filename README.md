@@ -38,7 +38,7 @@ Realicé la prueba técnica en el único tiempo que tuve disponible, mi trabajo 
 
 ### Figma: https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011
 
-# ¿Cómo ejecuto la web?
+# ¿Cómo ejecuto la web en local?
 
 1. Clonamos el repositorio abriendo la terminal y ejecutando "***git clone https://github.com/speedbuild98/frontend-dev-challenge***".
 1. Entramos a la carpeta del proyecto con "***cd /frontend-dev-challenge***".
