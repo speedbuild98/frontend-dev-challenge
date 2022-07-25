@@ -34,9 +34,9 @@ Realicé la prueba técnica en el único tiempo que tuve disponible, mi trabajo 
 
 -Realicé el deploy de la web en Netlify sin ningún Warn.
 
-Deploy: https://gallardo-weremote.netlify.app/
+## Deploy: https://gallardo-weremote.netlify.app/
 
-Figma: https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011
+### Figma: https://www.figma.com/file/NJjamPfIcxuOAyKHXt8MMw/WeRemote-Frontend-Challenge---Gallardo-Lautaro-Leonel?node-id=4%3A6011
 
 # ¿Cómo ejecuto la web?
 
